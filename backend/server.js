@@ -10,9 +10,12 @@ const port = process.env.PORT || 5000;
 
 app.use(
   cors({
-    origin: "*",
+    origin: "https://codematrix-mern.netlify.app",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
   })
 );
+
 app.use(express.json({ extended: true }));
 
 mongoose
